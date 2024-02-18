@@ -1,0 +1,1 @@
+These GUI models where created by using the Qt Bridge plugin for Figma. They can be viewed in the UI Design tool QT Design Studio. There will be future modifications to these models later along the line.
