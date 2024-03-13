@@ -25,12 +25,11 @@ ApplicationWindow {
             id: button
             property color backgroundDefaultColor: "#d9d9d9"
             property color backgroundPressedColor: Qt.darker(backgroundDefaultColor, 1.2)
-            property color contentItemTextColor: "#ffffff"
 
             text: qsTr("Autonomous Mode")
             contentItem: Text{
-                text: root.text
-                color: root.contentItemTextColor
+                text: text
+                color: "#ffffff"
                 font.pixelSize: 16
                 font.family: "Orbitron"
                 font.weight: Font.Normal
