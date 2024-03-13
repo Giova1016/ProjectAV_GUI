@@ -1,8 +1,12 @@
-import QtQuick 2.0
-import QtQuick.Controls 2.1
-import QtQuick.Studio.Components 1.0
+import QtQuick 2.15
+import QtQuick.Controls 2.15
 
-Rectangle {
+ApplicationWindow {
+    visible: true
+    width: 1089
+    height: 832
+    title: "Project AV 0.0.1"
+    Rectangle {
     id: light_Mode_GUI
     width: 1089
     height: 832
@@ -65,15 +69,15 @@ Rectangle {
 
         Text {
             id: sTART_STOP
-            width: 128
-            height: 21
+            width: 91
+            height: 22
             color: "#000000"
             text: qsTr("START/STOP")
             anchors.left: parent.left
             anchors.top: parent.top
-            anchors.leftMargin: 6
+            anchors.leftMargin: 25
             anchors.topMargin: 15
-            font.pixelSize: 16
+            font.pixelSize: 14
             horizontalAlignment: Text.AlignLeft
             verticalAlignment: Text.AlignTop
             wrapMode: Text.Wrap
@@ -163,40 +167,25 @@ Rectangle {
         anchors.leftMargin: 574
         anchors.topMargin: 200
     }
-
-    SvgPathItem {
-        id: vector
+    Rectangle{
         width: 470
         height: 40
+        color: "#8a8a8a"
         anchors.left: parent.left
         anchors.top: parent.top
         anchors.leftMargin: 46
         anchors.topMargin: 201
-        strokeWidth: 1
-        strokeStyle: 1
-        strokeColor: "transparent"
-        path: "M 0 0 L 470 0 L 470 40 L 0 40 L 0 0 Z"
-        joinStyle: 0
-        fillColor: "#8a8a8a"
-        antialiasing: true
     }
-
-    SvgPathItem {
-        id: vector1
+    Rectangle{
         width: 1001
         height: 22
+        color: "#8a8a8a"
         anchors.left: parent.left
         anchors.top: parent.top
         anchors.leftMargin: 47
         anchors.topMargin: 613
-        strokeWidth: 1
-        strokeStyle: 1
-        strokeColor: "transparent"
-        path: "M 0 0 L 1001 0 L 1001 22 L 0 22 L 0 0 Z"
-        joinStyle: 0
-        fillColor: "#8a8a8a"
-        antialiasing: true
     }
+
 
     Item {
         id: group_2
@@ -303,7 +292,7 @@ Rectangle {
         verticalAlignment: Text.AlignTop
         wrapMode: Text.Wrap
         font.weight: Font.Normal
-        font.family: "Paytone One"
+        font.family: "Orbitron"
     }
 
     Text {
@@ -321,7 +310,7 @@ Rectangle {
         verticalAlignment: Text.AlignTop
         wrapMode: Text.NoWrap
         font.weight: Font.Normal
-        font.family: "Paytone One"
+        font.family: "Orbitron"
     }
 
     Text {
@@ -333,20 +322,18 @@ Rectangle {
         anchors.left: parent.left
         anchors.top: parent.top
         anchors.leftMargin: 506
-        anchors.topMargin: 613
+        anchors.topMargin: 618
         font.pixelSize: 15
         horizontalAlignment: Text.AlignLeft
         verticalAlignment: Text.AlignTop
         wrapMode: Text.Wrap
         font.weight: Font.Normal
-        font.family: "Paytone One"
+        font.family: "Orbitron"
     }
 }
+  
+   
+    
 
-/*##^##
-Designer {
-    D{i:0;uuid:"24ec36c9-da69-51e5-a439-3e02b437665e"}D{i:15;uuid:"d999977e-16c6-5a1f-96a7-5f846242adae"}
-D{i:16;uuid:"e5ae5637-f7d3-56cb-ac01-e2556865c709"}
+
 }
-##^##*/
-

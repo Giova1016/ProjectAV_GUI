@@ -8,8 +8,8 @@ app = QGuiApplication(sys.argv)
 
 engine = QQmlApplicationEngine()
 engine.quit.connect(app.quit)
-engine.load('Dark_Mode_GUI.qml')
-# engine.load('Light_Mode_GUI.qml')
+# engine.load('Dark_Mode_GUI.ui.qml')
+engine.load('Light_Mode_GUI.ui.qml')
 
 sys.exit(app.exec())
 
