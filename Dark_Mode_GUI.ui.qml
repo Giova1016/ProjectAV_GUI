@@ -1,6 +1,6 @@
 import QtQuick
 import QtQuick.Controls
-import QtQuick.Studio.Components 1.0
+// import QtQuick.Studio.Components 1.0
 import QtQuickUltralite.Studio.Components
 
 Rectangle {
