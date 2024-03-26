@@ -85,15 +85,16 @@ ApplicationWindow {
             }
 
         Button {
-            id: button1
+            id: sTART_STOPButton
             property color backgroundDefaultColor: "#d9d9d9"
             property color backgroundPressedColor: Qt.darker(backgroundDefaultColor, 1.2)
-            property color contentItemTextColor: "#ffffff"
+            property color contentItemTextColor: "#00C853"
+            property color newColor: black
 
             text: qsTr("Start/Stop")
             contentItem: Text{
                     text: root.text
-                    color: root.contentItemTextColor
+                    color: root.tcontentItemTextColor
                     font.pixelSize: 16
                     font.family: "Orbitron"
                     font.weight: Font.Normal
