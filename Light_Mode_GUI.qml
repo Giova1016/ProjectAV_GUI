@@ -76,14 +76,6 @@ ApplicationWindow {
             }
         }
 
-            //Image{
-            //    id: rectangle1
-            //    anchors.left: parent.left
-            //    anchors.top: parent.top
-            //    anchors.leftMargin: -4
-            //    source: "assets/rectangle1_2.svg"
-            //}
-
         Button {
             id: button1
             property color backgroundDefaultColor: "#d9d9d9"
