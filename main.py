@@ -8,9 +8,9 @@ app = QGuiApplication(sys.argv)
 
 engine = QQmlApplicationEngine()
 engine.quit.connect(app.quit)
-# engine.load('Dark_Mode_GUI.ui.qml')
-engine.load('Light_Mode_GUI.ui.qml')
-
+# engine.load('Dark_Mode_GUI.qml') 
+# engine.load('Light_Mode_GUI.qml')
+engine.load('Basic_GUI.qml')
 sys.exit(app.exec())
 
 # from PySide6 import __version__ as pyside_version
