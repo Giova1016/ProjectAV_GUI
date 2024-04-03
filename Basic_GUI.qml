@@ -16,8 +16,9 @@ ApplicationWindow {
         border.color: "#8a8a8a"
         border.width: 1
         property alias camera1Text: camera1.text
-        property alias cameraText: camera.text
-        property alias imageText: image.text
+        property alias digitalcameraText: digitalcamera.text
+        property alias teleoperateText: teleoperate.text
+        property alias roscoreText: roscore.text
         property alias terminalText: terminal.text
 
         Button {
@@ -57,7 +58,7 @@ ApplicationWindow {
             }
 
             Text {
-                id: image
+                id: roscore
                 width: 133
                 height: 33
                 color: "#ffffff"
@@ -81,22 +82,35 @@ ApplicationWindow {
                 height: 50
                 anchors.left: parent.left
                 anchors.top: parent.top
-                anchors.leftMargin: 195
+                anchors.leftMargin: 210
                 anchors.topMargin: 280
                 source: "assets/cloud.png"
             }
-
-        Image {
+            
+        Button{
             id: button1
-            anchors.left: parent.left
-            anchors.top: parent.top
-            anchors.leftMargin: 42
-            anchors.topMargin: 192
-            source: "assets/button1.svg"
-        }
-
-        Item {
-            id: button2
+            property color backgroundDefaultColor: "#d9d9d9"
+            property color backgroundPressedColor: Qt.darker(backgroundDefaultColor, 1.2)
+            
+            text: qsTr("Teleoperate")
+            contentItem: Text{
+                text: text
+                color: "#232323"
+                font.pixelSize: 16
+                font.family: "Orbitron"
+                font.weight: Font.Normal
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                elide: Text.ElideRight
+            }
+            background:Item{
+                implicitHeight: 140
+                implicitWidth: 52
+                layer.enabled: true
+            }
+            onClicked: {
+                console.log("Teleoperate Enabled.")
+            }
             x: 46
             y: 367
             width: 237
@@ -108,20 +122,74 @@ ApplicationWindow {
                 anchors.leftMargin: -4
                 source: "assets/rectangle1.svg"
             }
-
+            Text {
+                id: teleoperate
+                width: 108
+                height: 32
+                color: "#ffffff"
+                text: qsTr("Teleoperate")
+                anchors.left: parent.left
+                anchors.top: parent.top
+                anchors.leftMargin: 43
+                anchors.topMargin: 12
+                font.pixelSize: 20
+                horizontalAlignment: Text.AlignLeft
+                verticalAlignment: Text.AlignTop
+                wrapMode: Text.Wrap
+                font.weight: Font.Normal
+                font.family: "Orbitron"
+            }
+        }
             Image {
-                id: image1
+                id: joystick
                 width: 50
                 height: 50
                 anchors.left: parent.left
                 anchors.top: parent.top
-                anchors.leftMargin: 161
-                anchors.topMargin: 6
-                source: "assets/camera.png"
+                anchors.leftMargin: 210
+                anchors.topMargin: 369
+                clip: true
+                source: "assets/joystick.png"
+            }
+
+        Button {
+            id: button2
+            property color backgroundDefaultColor: "#d9d9d9"
+            property color backgroundPressedColor: Qt.darker(backgroundDefaultColor, 1.2)
+
+            text: qsTr("Camera")
+            contentItem: Text{
+                text: text
+                color: "#232323"
+                font.pixelSize: 16
+                font.family: "Orbitron"
+                font.weight: Font.Normal
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                elide: Text.ElideRight
+            }
+            background: Item{
+                implicitHeight: 140
+                implicitWidth: 52
+                layer.enabled: true
+            }
+            onClicked: {
+                console.log("Activating Camera...")
+            }
+            x: 46
+            y: 200
+            width: 237
+            height: 56
+            Image {
+                id: rectangle2
+                anchors.left: parent.left
+                anchors.top: parent.top
+                anchors.leftMargin: -4
+                source: "assets/rectangle2.svg"
             }
 
             Text {
-                id: camera
+                id: digitalcamera
                 width: 107
                 height: 32
                 color: "#ffffff"
@@ -139,8 +207,19 @@ ApplicationWindow {
             }
         }
 
+            Image {
+                id: camera
+                width: 50
+                height: 50
+                anchors.left: parent.left
+                anchors.top: parent.top
+                anchors.leftMargin: 210
+                anchors.topMargin: 202
+                source: "assets/camera.png"
+            }     
+
         Rectangle {
-            id: rectangle2
+            id: rectangle3
             width: 640
             height: 480
             color: "#d9d9d9"
@@ -151,7 +230,7 @@ ApplicationWindow {
         }
 
         Rectangle {
-            id: rectangle3
+            id: rectangle4
             width: 1002
             height: 191
             color: "#d9d9d9"
@@ -162,7 +241,7 @@ ApplicationWindow {
         }
 
         Rectangle {
-            id: rectangle4
+            id: rectangle5
             width: 1089
             height: 81
             color: "#00b3ec"
@@ -197,18 +276,6 @@ ApplicationWindow {
             anchors.leftMargin: 486
             anchors.topMargin: 3
             source: "assets/logo_Project_AV_Sebastian_Pena_1.png"
-        }
-
-        Image {
-            id: joystick
-            width: 50
-            height: 50
-            anchors.left: parent.left
-            anchors.top: parent.top
-            anchors.leftMargin: 201
-            anchors.topMargin: 195
-            clip: true
-            source: "assets/joystick.png"
         }
 
         Text {
