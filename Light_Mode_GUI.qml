@@ -41,10 +41,10 @@ ApplicationWindow {
                     implicitWidth: 140
                     implicitHeight: 52
                     layer.enabled: true 
-                    }
+                }
                 onClicked: {
                     console.log("Autonomous Mode Initialized.")
-                    }
+                }
             x: 361
             y: 115
             width: 358
@@ -76,24 +76,15 @@ ApplicationWindow {
             }
         }
 
-            Image{
-                id: rectangle1
-                anchors.left: parent.left
-                anchors.top: parent.top
-                anchors.leftMargin: -4
-                source: "assets/rectangle1_2.svg"
-            }
-
         Button {
             id: button1
             property color backgroundDefaultColor: "#d9d9d9"
             property color backgroundPressedColor: Qt.darker(backgroundDefaultColor, 1.2)
-            property color contentItemTextColor: "#ffffff"
 
             text: qsTr("Start/Stop")
             contentItem: Text{
-                    text: root.text
-                    color: root.contentItemTextColor
+                    text: text
+                    color: "#ffffff"
                     font.pixelSize: 16
                     font.family: "Orbitron"
                     font.weight: Font.Normal
@@ -184,12 +175,13 @@ ApplicationWindow {
             anchors.topMargin: 614
         }
 
-        Image {
+        Rectangle {
             id: rectangle5
-            width: 1098
+            width: 1089
+            height: 81
+            color: "#e75b10"
             anchors.left: parent.left
             anchors.top: parent.top
-            source: "assets/rectangle5.svg"
         }
 
         Image {

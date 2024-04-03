@@ -76,24 +76,15 @@ ApplicationWindow {
             }
         }
 
-            Image {
-                id: rectangle1
-                anchors.left: parent.left
-                anchors.top: parent.top
-                anchors.leftMargin: -4
-                source: "assets/rectangle1_2.svg"
-            }
-
         Button{
             id: button1
             property color backgroundDefaultColor: "#d9d9d9"
             property color backgroundPressedColor: Qt.darker(backgroundDefaultColor, 1.2)
-            property color contentItemTextColor: "#ffffff"
 
             text: qsTr("Start/Stop")
             contentItem: Text{
-                    text: root.text
-                    color: root.contentItemTextColor
+                    text: text
+                    color: "#ffffff"
                     font.pixelSize: 16
                     font.family: "Orbitron"
                     font.weight: Font.Normal
@@ -184,11 +175,13 @@ ApplicationWindow {
             anchors.topMargin: 614
         }
 
-        Image {
+        Rectangle {
             id: rectangle5
+            width: 1089
+            height: 81
+            color: "#e75b10"
             anchors.left: parent.left
             anchors.top: parent.top
-            source: "assets/rectangle5_1.svg"
         }
 
         Image {
@@ -408,4 +401,3 @@ ApplicationWindow {
     D{i:28;uuid:"eef3fe15-9e73-564e-8332-e3a8b10c0cbb"}
     }
     ##^##*/
-
