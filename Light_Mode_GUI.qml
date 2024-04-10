@@ -22,7 +22,7 @@ ApplicationWindow {
         property alias tERMINALText: tERMINAL.text
 
         Button {
-            id: button
+            id: autonomous_Mode_button
             property color backgroundDefaultColor: "#d9d9d9"
             property color backgroundPressedColor: Qt.darker(backgroundDefaultColor, 1.2)
             
@@ -50,7 +50,7 @@ ApplicationWindow {
             width: 358
             height: 52
             Image {
-                id: rectangle
+                id: autonomous_mode_image
                 anchors.left: parent.left
                 anchors.top: parent.top
                 anchors.leftMargin: -4
@@ -77,13 +77,13 @@ ApplicationWindow {
         }
 
         Button {
-            id: button1
+            id: sTART_STOPButton
             property color backgroundDefaultColor: "#d9d9d9"
             property color backgroundPressedColor: Qt.darker(backgroundDefaultColor, 1.2)
 
             text: qsTr("Start/Stop")
             contentItem: Text{
-                    text: text
+                     text: text
                     color: "#ffffff"
                     font.pixelSize: 16
                     font.family: "Orbitron"
@@ -105,7 +105,7 @@ ApplicationWindow {
             width: 140
             height: 52
             Image {
-                id: rectangle_1
+                id: start_stop_image
                 anchors.left: parent.left
                 anchors.top: parent.top
                 anchors.leftMargin: -4
@@ -132,7 +132,7 @@ ApplicationWindow {
         }
 
         Rectangle {
-            id: rectangle2
+            id: rVIZ_Display
             width: 470
             height: 356
             color: "#d9d9d9"
@@ -143,8 +143,8 @@ ApplicationWindow {
         }
 
         Rectangle {
-            id: rectangle_2
-            width: 466
+            id: cameraBackgroundRectangle
+            width: 470
             height: 40
             color: "#8a8a8a"
             anchors.left: parent.left
@@ -154,7 +154,7 @@ ApplicationWindow {
         }
 
         Rectangle {
-            id: rectangle3
+            id: cameraBox
             width: 470
             height: 356
             color: "#d9d9d9"
@@ -165,7 +165,7 @@ ApplicationWindow {
         }
 
         Rectangle {
-            id: rectangle4
+            id: terminalBox
             width: 1002
             height: 191
             color: "#d9d9d9"
@@ -175,12 +175,13 @@ ApplicationWindow {
             anchors.topMargin: 614
         }
 
-        Rectangle {
-            id: rectangle5
+        Image {
+            id: tOP_banner
             width: 1089
             height: 81
             color: "#e75b10"
             anchors.left: parent.left
+            anchors.right: parent.right
             anchors.top: parent.top
         }
 
@@ -213,7 +214,7 @@ ApplicationWindow {
         }
 
         Rectangle {
-            id: vector
+            id: rVIZ_Heading
             width: 470
             height: 40
             anchors.left: parent.left
@@ -225,7 +226,7 @@ ApplicationWindow {
         }
 
         Rectangle {
-            id: vector1
+            id: terminal_Heading
             width: 1001
             height: 22
             anchors.left: parent.left
@@ -291,7 +292,7 @@ ApplicationWindow {
         }
 
         Rectangle {
-            id: rectangle_3
+            id: cameraRectangle
             width: 148
             height: 22
             color: "#ff5900"
@@ -303,10 +304,10 @@ ApplicationWindow {
         }
 
         Rectangle {
-            id: rectangle_4
+            id: rVIZRectangle
             width: 148
             height: 22
-            color: "#ff5900"
+            color: "#ff5900" 
             radius: 2
             anchors.left: parent.left
             anchors.top: parent.top
@@ -315,7 +316,7 @@ ApplicationWindow {
         }
 
         Rectangle {
-            id: rectangle_5
+            id: terminalRectangle
             width: 148
             height: 16
             color: "#ff5900"
